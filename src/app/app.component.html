@@ -9,4 +9,8 @@
       {{streakToString(streak)}}
     </div>
   </div>
+  <div *ngIf="fileLoaded">
+    <h3>You have received {{actualPurples}} purples and were expected to receive {{cumuPurples | number:'1.0-0'}} purples.</h3>
+    <h3>You are {{actualPurples - cumuPurples | number:'1.0-0'}} on purples</h3>
+  </div>
 </div>

@@ -13,12 +13,16 @@ export class AppComponent {
   dryPoints : number[] = [];
   dryStreaks : any[] = [];
   dryPurples : any[] = [];
+  cumuPurples: number = 0;
+  actualPurples: number = 0;
+  fileLoaded = false;
 
   constructor() {
     
   }
 
   fileBrowserHandler(files: any) {
+    this.fileLoaded = true;
     this.dryStreaks = [];
     this.dryPoints = [];
     this.dryPurples = [];
@@ -40,6 +44,7 @@ export class AppComponent {
         this.dryStreak++;
         this.dryPoints.push(i.totalPoints);
         this.dryPurples.push(this.chance(i.totalPoints));
+        this.cumuPurples += this.chance(i.totalPoints);
         if (i.specialLoot) {
             let prob = 1 - this.dryPoints.map(x => 1 - this.chance(x)).reduce((a,b) => a * b, 1);
             this.dryStreaks.push({streak: this.dryStreak, loot: i.specialLoot, receiver: i.specialLootReceiver, p: prob, points: this.totalPoints(), expectation: this.dryPurples.reduce((a,b)=>a+b,0)});
@@ -47,6 +52,7 @@ export class AppComponent {
             this.dryStreak = 0;
             this.dryPoints = [];
             this.dryPurples = [];
+            this.actualPurples += 1;
         }
       });
       let prob = 1 - this.dryPoints.map(x => 1 - this.chance(x)).reduce((a,b) => a * b, 1);
@@ -56,18 +62,18 @@ export class AppComponent {
     fileReader.readAsText(this.file);
   }
 
-  factorial(num: any){
+  factorial(num: any) {
       var rval=1;
       for (var i = 2; i <= num; i++)
           rval = rval * i;
       return rval;
   }
 
-  chance(num : any){
+  chance(num : any) {
       return ( num / 570000 ) * .8;
   }
 
-  totalPoints(){
+  totalPoints() {
       return this.dryPoints.reduce((a,b) => a + b, 0);
   }
 
