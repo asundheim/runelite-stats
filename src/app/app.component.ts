@@ -18,6 +18,10 @@ export class AppComponent {
   }
 
   fileBrowserHandler(files: any) {
+    this.dryStreaks = [];
+    this.dryPoints = [];
+    this.dryStreak = 0;
+
     this.file = files.target.files[0];
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
@@ -64,6 +68,6 @@ export class AppComponent {
   }
 
   streakToString(streak: any) {
-    return `Dry Streak: ${streak.streak} - broken by ${streak.loot} from ${streak.receiver} - probability of purple ${streak.p}% (${streak.points} points)`;
+    return `${!streak.loot?"Current ":""}Dry Streak: ${streak.streak}` + (streak.loot ? ` - broken by ${streak.loot} from ${streak.receiver}` : "") +  ` - probability of purple ${streak.p * 100}% (${streak.points} points)`;
   }
 }
