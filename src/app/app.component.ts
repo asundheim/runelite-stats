@@ -70,7 +70,7 @@ export class AppComponent {
   }
 
   chance(num : any) {
-      return ( num / 570000 ) * .8;
+      return ( num / 570000 ) * .657;
   }
 
   totalPoints() {
