@@ -1,5 +1,5 @@
 {
-  "name": "cox-dry-streak",
+  "name": "runelite-stats",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "release": "ng build --base-href=\"/cox-drystreaks/\" && del /s /q docs && xcopy dist\\cox-dry-streak docs /s /e /q && copy docs\\index.html docs\\404.html"
+    "release": "ng build --base-href=\"/runelite-stats/\" && del /s /q docs && xcopy dist\\runelite-stats docs /s /e /q && copy docs\\index.html docs\\404.html"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~12.0.4",
     "@angular/platform-browser-dynamic": "~12.0.4",
     "@angular/router": "~12.0.4",
+    "chart.js": "^3.5.0",
     "fs": "0.0.1-security",
     "readline": "^1.3.0",
     "rxjs": "~6.6.0",

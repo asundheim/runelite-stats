@@ -1,0 +1,13 @@
+<div style = "display: flex; justify-content: center;flex-direction: column; align-items: center;">
+    <h3>Select gauntlet data file here (the gauntlet.log from .runelite/loots/your user/events/the gauntlet.log)</h3>
+    <div>
+        You can usually find your .runelite folder in C:\Users\your user\.runelite. Otherwise, try this guide: <a href="https://savelocation.net/runelite">https://savelocation.net/runelite</a>
+    </div>
+    <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowserHandler($event)">
+    <canvas #deathLootsVsTime width="100%"></canvas>
+    <div class="hovered-loot" style="margin-top: 5px;">
+        <div *ngFor="let loot of hoveredLoot">
+            {{loot.name}} (x{{loot.quantity}})
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div style = "display: flex; justify-content: center;flex-direction: column; align-items: center;">
+    <h3>Select raid data file here (raid_tracker_data.log from .runelite/raid-data-tracker/your user/cox)</h3>
+    <div>
+        You can usually find your .runelite folder in C:\Users\your user\.runelite. Otherwise, try this guide: <a href="https://savelocation.net/runelite">https://savelocation.net/runelite</a>
+    </div>
+    <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowserHandler($event)">
+    <div>
+        <div class="streak" *ngFor="let streak of dryStreaks">
+        {{streakToString(streak)}}
+        </div>
+    </div>
+    <div *ngIf="fileLoaded">
+        <h3>You have received {{actualPurples}} purples and were expected to receive {{cumuPurples | number:'1.0-0'}} purples.</h3>
+        <h3>You are {{actualPurples - cumuPurples | number:'1.0-0'}} on purples</h3>
+    </div>
+</div>
+
