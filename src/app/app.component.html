@@ -1,4 +1,6 @@
 <div class="dropzone" >
+  <button (click)="enableCoxDrystreaks()">Cox Drystreaks</button>
+  <button (click)="enableGauntletStats()">Gauntlet Stats</button>
   <app-cox-drystreaks *ngIf="displayCoxDrystreaksTab"></app-cox-drystreaks>
   <app-gauntlet-stats *ngIf="displayGauntletTab"></app-gauntlet-stats>
 </div>

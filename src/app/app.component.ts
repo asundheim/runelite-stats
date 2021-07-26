@@ -10,4 +10,13 @@ export class AppComponent {
   displayCoxDrystreaksTab = false;
   displayGauntletTab = true;
   
+  enableCoxDrystreaks() {
+    this.displayCoxDrystreaksTab = true;
+    this.displayGauntletTab = false;
+  }
+
+  enableGauntletStats() {
+    this.displayCoxDrystreaksTab = false;
+    this.displayGauntletTab = true;
+  }
 }
