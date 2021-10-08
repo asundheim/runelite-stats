@@ -30,6 +30,12 @@ export class CoxDrystreaksComponent {
     this.file = files.target.files[0];
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
+      this.dryStreak = 0;
+      this.dryPoints = [];
+      this.dryStreaks = [];
+      this.dryPurples = [];
+      this.cumuPurples = 0;
+      this.actualPurples = 0;
       const result : any = fileReader.result;
       console.log(result);
       const data = result.split("\n").filter((x : any) => x.length > 10).map((x : any) => {
@@ -54,6 +60,7 @@ export class CoxDrystreaksComponent {
             this.actualPurples += 1;
         }
       });
+      
       let prob = 1 - this.dryPoints.map(x => 1 - this.chance(x)).reduce((a,b) => a * b, 1);
       this.dryStreaks.push({streak: this.dryStreak, loot: null, receiver: null, p: prob, points: this.totalPoints(),expectation: this.dryPurples.reduce((a,b)=>a+b,0)});
       console.log(`Current Dry Streak: ${this.dryStreak} - probability of purple ${prob * 100}% (${this.totalPoints()} points)`);

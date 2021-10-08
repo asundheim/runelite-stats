@@ -10,4 +10,16 @@
             {{loot.name}} (x{{loot.quantity}})
         </div>
     </div>
+    <div *ngIf="mostCompletesInDay > 0" style="margin-top: 5px;border: 1px black;">
+        Most completes in a day: {{ mostCompletesInDay }} on {{ mostCompletesInDayDay }}
+    </div>
+    <div *ngIf="mostFailsInDay > 0" style="margin-top: 5px;border: 1px black;">
+        Most fails in a day: {{ mostFailsInDay }} on {{ mostFailsInDayDay }}
+    </div>
+    <div *ngIf="mostCompletesInARow > 0" style="margin-top: 5px;border: 1px black;">
+        Most completes in a row: {{ mostCompletesInARow }}
+    </div>
+    <div *ngIf="mostFailsInARow > 0" style="margin-top: 5px;border: 1px black;">
+        Most fails in a row: {{ mostFailsInARow }}
+    </div>
 </div>

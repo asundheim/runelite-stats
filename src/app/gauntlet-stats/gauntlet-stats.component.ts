@@ -11,6 +11,12 @@ export class GauntletStatsComponent implements AfterViewInit {
   lineCtx: CanvasRenderingContext2D | any = null;
   gauntletData: {date: Date, loot: {name: string, price: number, quantity: number}[]}[] = [];
   hoveredLoot: any = null;
+  mostCompletesInDay = 0;
+  mostCompletesInDayDay = "";
+  mostFailsInDay = 0;
+  mostFailsInDayDay = "";
+  mostCompletesInARow = 0;
+  mostFailsInARow = 0;
 
   fileLoaded = false;
   file : any;
@@ -37,11 +43,47 @@ export class GauntletStatsComponent implements AfterViewInit {
       });
       console.log(data);
       console.log(this.lineCtx);
-      //;
+      
+      let winStreak = 0;
+      let loseStreak = 0;
       data.forEach((item : any, idx: number) => {
         let date : Date = new Date(Date.parse(item.date));
         let loot : {name: string, price: number, quantity: number}[] = item.drops;
         this.gauntletData.push({date: date, loot: loot});
+        if (loot.length === 1) {
+          winStreak = 0;
+          loseStreak += 1;
+        } else {
+          winStreak += 1;
+          loseStreak = 0;
+        }
+        if (winStreak > this.mostCompletesInARow) {
+          this.mostCompletesInARow = winStreak;
+        }
+
+        if (loseStreak > this.mostFailsInARow) {
+          this.mostFailsInARow = loseStreak;
+        }
+      });
+
+      let dayGroups : {[key: string]: []} = this.gauntletData.reduce((map : any, next) => {
+        let date : Date = next.date;
+        (map[`${date.getMonth()}-${date.getDate()}-${date.getFullYear()}`] = map[`${date.getMonth()}-${date.getDate()}-${date.getFullYear()}`] || []).push(next);
+        return map;
+      }, {});
+
+      console.log(dayGroups);
+
+      Object.entries(dayGroups).forEach(([day, kills]) => {
+        if (kills.filter((kill : any) => kill.loot.length > 1).length > this.mostCompletesInDay) {
+          this.mostCompletesInDay = kills.filter((kill : any) => kill.loot.length > 1).length;
+          this.mostCompletesInDayDay = day;
+        }
+
+        if (kills.filter((kill : any) => kill.loot.length === 1).length > this.mostFailsInDay) {
+          this.mostFailsInDay = kills.filter((kill : any) => kill.loot.length === 1).length;
+          this.mostFailsInDayDay = day;
+        }
       });
 
       this.redrawLineGraph();
@@ -66,6 +108,10 @@ export class GauntletStatsComponent implements AfterViewInit {
 
       if (item.loot.filter((x: any) => x.name === "Youngllef").length > 0) {
         this.lineCtx.fillStyle = "#bae1ff";
+      }
+
+      if (item.loot.filter((x: any) => x.name === "Enhanced crystal weapon seed").length > 0) {
+        this.lineCtx.fillStyle = "#0cfff4";
       }
 
       this.lineCtx.beginPath();
