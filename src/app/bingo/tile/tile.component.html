@@ -1,0 +1,13 @@
+<div style="position: relative;">
+    <img [src]="tile.image" width="100%" height="100%"/>
+
+    <div class="points-1" [ngClass]="{'selected': selected1}" (click)="select1()" *ngIf="tile.hasPoints">
+        
+    </div>
+    <div class="points-2" [ngClass]="{'selected': selected2}" (click)="select2()" *ngIf="tile.hasPoints">
+
+    </div>
+    <div class="points-3" [ngClass]="{'selected': selected3}" (click)="select3()" *ngIf="tile.hasPoints">
+
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.points-1 {
+    position: absolute;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    top: calc(100% / 1.5);
+}
+
+.points-2 {
+    position: absolute;
+    width: calc(100% / 3);
+    right: calc(100% / 3);
+    top: calc(100% / 1.5);
+    height: calc(100% / 3);
+
+}
+
+.points-3 {
+    position: absolute;
+    width: calc(100% / 3);
+    left: calc(100% / 1.5);
+    height: calc(100% / 3);
+    top: calc(100% / 1.5);
+}
+
+.selected {
+    outline: 3px solid black;
+}

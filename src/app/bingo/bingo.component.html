@@ -1,0 +1,16 @@
+<div class="table" width="100%">
+    <tr *ngFor="let bingoRow of bingoTiles">
+        <td *ngFor="let bingoTile of bingoRow" style="padding-right:4px">
+            <app-tile [tile]="bingoTile" (pointsChangedEvent)="updatePoints($event)"
+             (tileSelectedEvent)="selectTile($event)" (tileUnselectedEvent)="unselectTile($event)">
+
+            </app-tile>
+        </td>
+    </tr>
+    <div style="font-size: 2em;">
+        <label for="inferno-input">Inferno tile points: </label>
+        <input style="height: 2em" name="inferno-input" (keyup)="onInferno($event)" type="number">
+        <br>
+        Total: {{realTotalPoints()}} + Row Bonus ({{rowPoints}}) + Column Bonus ({{columnPoints}}) = {{totalTotalPoints}}
+    </div>
+</div>
