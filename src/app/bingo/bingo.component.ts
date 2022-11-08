@@ -17,7 +17,7 @@ export class BingoComponent {
         points_reversed: true,
         display_name: "Fastest Chambers Time (Trio)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/fastest-cox.png",
+        image: "../../runelite-stats/assets/fastest-cox.png",
         row: 1,
         column: 1
       } as IBingoTile,
@@ -28,7 +28,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Slayer Experience",
         hasPoints: true,
-        image: "../../assets/runelite-stats/slayer-xp.png",
+        image: "../../runelite-stats/assets/slayer-xp.png",
         row: 1,
         column: 2
       } as IBingoTile,
@@ -39,7 +39,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Nex Kills (5-mans or less)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/nex-kills.png",
+        image: "../../runelite-stats/assets/nex-kills.png",
         row: 1,
         column: 3
       } as IBingoTile,
@@ -50,7 +50,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Different Barrows Uniques",
         hasPoints: true,
-        image: "../../assets/runelite-stats/barrows.png",
+        image: "../../runelite-stats/assets/barrows.png",
         row: 1,
         column: 4
       } as IBingoTile,
@@ -61,7 +61,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Tombs of Amascut Uniques (no gems)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/toa-uniques.png",
+        image: "../../runelite-stats/assets/toa-uniques.png",
         row: 1,
         column: 5
       } as IBingoTile
@@ -74,7 +74,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "ToA Raid Level Completion (Trio+)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/toa-raid-level.png",
+        image: "../../runelite-stats/assets/toa-raid-level.png",
         row: 2,
         column: 1
       } as IBingoTile,
@@ -85,7 +85,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Nightmare Speeds (5-man)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/nightmare-speeds.png",
+        image: "../../runelite-stats/assets/nightmare-speeds.png",
         row: 2,
         column: 2
       } as IBingoTile,
@@ -96,7 +96,7 @@ export class BingoComponent {
         points_reversed: true,
         display_name: "Fastest Barbarian Assault",
         hasPoints: true,
-        image: "../../assets/runelite-stats/fastest-ba.png",
+        image: "../../runelite-stats/assets/fastest-ba.png",
         row: 2,
         column: 3
       } as IBingoTile,
@@ -107,7 +107,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Cox CM Speeds (Trio)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/cm-speeds.png",
+        image: "../../runelite-stats/assets/cm-speeds.png",
         row: 2,
         column: 4
       } as IBingoTile,
@@ -118,7 +118,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Uniques from Different GWD Bosses",
         hasPoints: true,
-        image: "../../assets/runelite-stats/gwd-uniques.png",
+        image: "../../runelite-stats/assets/gwd-uniques.png",
         row: 2,
         column: 5
       } as IBingoTile
@@ -131,7 +131,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Fight Cave Speeds",
         hasPoints: true,
-        image: "../../assets/runelite-stats/fight-cave-speeds.png",
+        image: "../../runelite-stats/assets/fight-cave-speeds.png",
         row: 3,
         column: 1
       } as IBingoTile,
@@ -142,7 +142,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Chambers of Xeric Uniques",
         hasPoints: true,
-        image: "../../assets/runelite-stats/cox-uniques.png",
+        image: "../../runelite-stats/assets/cox-uniques.png",
         row: 3,
         column: 2
       } as IBingoTile,
@@ -153,7 +153,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Best Inferno Attempt per Team",
         hasPoints: false,
-        image: "../../assets/runelite-stats/inferno.png",
+        image: "../../runelite-stats/assets/inferno.png",
         row: 3,
         column: 3
       } as IBingoTile,
@@ -164,7 +164,7 @@ export class BingoComponent {
         points_reversed: true,
         display_name: "Fastest ToB Time (Trio)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/fastest-tob.png",
+        image: "../../runelite-stats/assets/fastest-tob.png",
         row: 3,
         column: 4
       } as IBingoTile,
@@ -175,7 +175,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Crystal Armour and Weapon Seeds",
         hasPoints: true,
-        image: "../../assets/runelite-stats/gauntlet.png",
+        image: "../../runelite-stats/assets/gauntlet.png",
         row: 3,
         column: 5
       } as IBingoTile
@@ -188,7 +188,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "ToB Speeds (Trio)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/tob-speeds.png",
+        image: "../../runelite-stats/assets/tob-speeds.png",
         row: 4,
         column: 1
       } as IBingoTile,
@@ -199,7 +199,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Dagannoth King Rings",
         hasPoints: true,
-        image: "../../assets/runelite-stats/dks.png",
+        image: "../../runelite-stats/assets/dks.png",
         row: 4,
         column: 2
       } as IBingoTile,
@@ -210,7 +210,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "CoX CM Completions (Trio)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/cm-completions.png",
+        image: "../../runelite-stats/assets/cm-completions.png",
         row: 4,
         column: 3
       } as IBingoTile,
@@ -221,7 +221,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Different Wildy Demi Boss Shards",
         hasPoints: true,
-        image: "../../assets/runelite-stats/wildy.png",
+        image: "../../runelite-stats/assets/wildy.png",
         row: 4,
         column: 4
       } as IBingoTile,
@@ -232,7 +232,7 @@ export class BingoComponent {
         points_reversed: true,
         display_name: "Fastest Dragon Slayer 1 Time",
         hasPoints: true,
-        image: "../../assets/runelite-stats/ds1.png",
+        image: "../../runelite-stats/assets/ds1.png",
         row: 4,
         column: 5
       } as IBingoTile
@@ -245,7 +245,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Hespori Speeds",
         hasPoints: true,
-        image: "../../assets/runelite-stats/hespori.png",
+        image: "../../runelite-stats/assets/hespori.png",
         row: 5,
         column: 1
       } as IBingoTile,
@@ -256,7 +256,7 @@ export class BingoComponent {
         points_reversed: true,
         display_name: "Fastest ToA Time (Trio)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/fastest-toa.png",
+        image: "../../runelite-stats/assets/fastest-toa.png",
         row: 5,
         column: 2
       } as IBingoTile,
@@ -267,7 +267,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "ToA Speeds (Trio 300s)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/toa-speeds.png",
+        image: "../../runelite-stats/assets/toa-speeds.png",
         row: 5,
         column: 3
       } as IBingoTile,
@@ -278,7 +278,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Different Zulrah Uniques",
         hasPoints: true,
-        image: "../../assets/runelite-stats/zulrah.png",
+        image: "../../runelite-stats/assets/zulrah.png",
         row: 5,
         column: 4
       } as IBingoTile,
@@ -289,7 +289,7 @@ export class BingoComponent {
         points_reversed: false,
         display_name: "Different Clue Scroll Uniques (any tier)",
         hasPoints: true,
-        image: "../../assets/runelite-stats/clue-scrolls.png",
+        image: "../../runelite-stats/assets/clue-scrolls.png",
         row: 5,
         column: 5
       } as IBingoTile
